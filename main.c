@@ -25,5 +25,42 @@ int main()
     // Verify PIN
     if(!verifyPin(pin))
     {
-        return 0;
+        return 0; 
     }
+
+     // Transaction Menu
+    while(continue_transaction)
+    {
+        showMenu();
+
+        printf("\n\t\tSelect an option : ");
+        scanf("%d", &option);
+
+        switch(option)
+        {
+            case 1:
+                balance = withdraw(balance);
+                break;
+
+            case 2:
+                balance = deposit(balance);
+                break;
+
+            case 3:
+                checkBalance(balance);
+                break;
+
+            default:
+                Beep(500,450);
+                printf("\n\t\tInvalid Option!");
+        }
+
+        printf("\n\n\t\tDo you want another transaction?");
+        printf("\n\t\tPress 1 [Yes], 0 [No] : ");
+        scanf("%d", &continue_transaction);
+    }
+
+    printf("\n\n\t\t**** Thank You for Banking with HDFC BANK ****\n");
+
+    return 0;
+}
