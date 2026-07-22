@@ -20,7 +20,7 @@ int main()
 
     displayDateTime();
 
-    printf("\n\t\t\t**** WELCOME TO NEXUS DIGITAL ATM ****\n");
+    printf("\n\t\t\t**** WELCOME TO NEXUS DIGITAL BANK ****\n");
     
     // Verify PIN
     if(!verifyPin(pin))
@@ -60,7 +60,7 @@ int main()
         scanf("%d", &continue_transaction);
     }
 
-    printf("\n\n\t\t**** Thank You for Banking with HDFC BANK ****\n");
+    printf("\n\n\t\t**** Thank You for Banking with NEXUS DIGITAL BANK ****\n");
 
     return 0;
 }
